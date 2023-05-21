@@ -9,16 +9,11 @@ const port = process.env.PORT || 8080;
 
 const app = express()
 const server = http.createServer(app)
+const io = new Server(server)
 
 app.get('/', (req, res, next) => {
   res.json("OK")
 })
-
-server.listen(port, () => {
-  console.log(`Server started at ${port}`);
-})
-
-const io = new Server(server)
 
 io.on('connection', (socket) => {
   // socket.emit('connect', { message: 'a new client connected' })
@@ -27,3 +22,8 @@ io.on('connection', (socket) => {
     console.log("Disconnected", socket.id);
   })
 })
+
+server.listen(port, () => {
+  console.log(`Server started at ${port}`);
+})
+
