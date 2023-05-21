@@ -1,0 +1,19 @@
+{
+  "name": "socket_io_node_example",
+  "version": "1.0.0",
+  "description": "Socket IO chat example using NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "socket-io",
+    "node-js"
+  ],
+  "author": "Rainer Regan",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.22",
+    "socket.io": "^4.6.1"
+  }
+}
